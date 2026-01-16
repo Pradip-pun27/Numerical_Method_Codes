@@ -1,0 +1,9 @@
+# Ignore the output directory
+output/
+
+# Ignore Vim/Nano swap files
+.*.swp
+
+# Ignore compiled executable files (common in C++)
+*.exe
+*.out
