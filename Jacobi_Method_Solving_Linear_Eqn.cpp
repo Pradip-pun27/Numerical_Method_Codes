@@ -2,7 +2,7 @@
 #include<cmath>
 using namespace std;
 int main() {
-    int n,i,j,stop=1;
+    int n,i,j;
     float sum,el,E[10],a[10][10],b[10],new_x[10],old_x[10];
     cout<<"Enter Dim. of a system of Linear Equation: ";
     cin>>n;
@@ -44,8 +44,9 @@ int main() {
                 break;
             }
         }
-        cout<<"Solution are \n";
+
         if(i==n){
+            cout<<"Solution are \n";
             for(i=0;i<n;i++){
                 cout<<new_x[i]<<" ";
             }
