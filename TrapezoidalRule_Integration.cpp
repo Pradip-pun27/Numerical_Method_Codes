@@ -12,7 +12,7 @@ int main() {
     h=(xn-x0)/k;
     fx0=f(x0);
     fxn=f(xn);
-    term=f(x0)+f(xn);
+    term=fx0+fxn;
     for(i=1;i<k;i++){
         a=x0+(i*h);
         term=term+2*(f(a));
