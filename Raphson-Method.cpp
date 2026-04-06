@@ -11,6 +11,13 @@ int main() {
     cin>>a3>>a2>>a1>>a0;
     cout<<"Enter the initial guess and the Error Tolerance(E) : ";
     cin>>x0>>E;
+
+    if(fabs(Df(x0))<0.000003){
+        cout<<"Sorry Will create a divide by Zero Problem!"<<endl;
+    }
+
+    else{
+
     while(1){
         i++;
         fx0 = F(x0);
@@ -26,5 +33,6 @@ int main() {
             break;
         }
     }
+}
     return 0;
 }
