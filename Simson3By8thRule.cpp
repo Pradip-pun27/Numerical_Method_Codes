@@ -2,10 +2,10 @@
 using namespace std;
 #define F(x) (1/(1+x*x))
 int main() {
-    double h,Integral,sum,l,u;
-    int i,n,co=1;
+    double h,Integral,sum,a,b;
+    int i,n;
     cout<<"Enter the value of lower and upper: ";
-    cin>>l>>u;
+    cin>>a>>b;
     cout<<"Enter the value of Number of Sub-Intervals (must be divisible by 3): ";
     cin>>n;
     
@@ -14,17 +14,15 @@ int main() {
         return 1;
     }
     
-    h=(u-l)/n;
-    sum = F(l) + F(u);
+    h=(b-a)/n;
+    sum = F(a) + F(b);
 
     for(i=1; i<n; i++) {
-        if(co<=2){
-            sum+=3*F(l + i*h);
-            co++;
+        if(i%3==0){
+            sum+=2*F(a + i*h);
         }
         else{
-            sum+=2*F(l + i*h);
-            co=1;
+            sum+=3*F(a + i*h);
         }
     }
     
